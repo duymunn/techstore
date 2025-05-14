@@ -22,7 +22,7 @@ export default function Home() {
         </div>
         <div className="container mx-auto px-4 h-full flex items-center relative z-20">
           <div className="w-full md:w-1/2 space-y-6 text-white">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Công nghệ hiện đại, giá cả hợp lý
             </h1>
             <p className="text-lg md:text-xl text-blue-100">
@@ -97,7 +97,7 @@ export default function Home() {
       <div className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold flex items-center text-gray-900">
+            <h2 className="text-2xl md:text-3xl font-bold flex items-center">
               <span className="w-8 h-8 bg-blue-600 rounded-md mr-3"></span>
               Sản phẩm nổi bật
             </h2>
@@ -146,7 +146,7 @@ export default function Home() {
       <div className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold flex items-center text-gray-900">
+            <h2 className="text-2xl md:text-3xl font-bold flex items-center">
               <span className="w-8 h-8 bg-blue-600 rounded-md mr-3"></span>
               Danh mục sản phẩm
             </h2>
@@ -164,7 +164,7 @@ export default function Home() {
             ].map((category) => (
               <Link href={category.link} key={category.title} className="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow text-center group hover:border-blue-300">
                 <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{category.icon}</div>
-                <h3 className="text-xl font-semibold mb-1 group-hover:text-blue-600 transition-colors text-gray-800">{category.title}</h3>
+                <h3 className="text-xl font-semibold mb-1 group-hover:text-blue-600 transition-colors">{category.title}</h3>
                 <p className="text-sm text-gray-500">{category.description}</p>
               </Link>
             ))}
@@ -176,7 +176,7 @@ export default function Home() {
       <div className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold flex items-center text-gray-900">
+            <h2 className="text-2xl md:text-3xl font-bold flex items-center">
               <span className="w-8 h-8 bg-blue-600 rounded-md mr-3"></span>
               Sản phẩm mới về
             </h2>
@@ -204,14 +204,14 @@ export default function Home() {
       {/* Brands */}
       <div className="py-12 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 flex items-center text-gray-900">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 flex items-center">
             <span className="w-8 h-8 bg-blue-600 rounded-md mr-3"></span>
             Thương hiệu nổi bật
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4">
             {['Asus', 'MSI', 'Dell', 'HP', 'Acer', 'Lenovo'].map((brand) => (
               <div key={brand} className="border border-gray-200 rounded-lg p-4 flex items-center justify-center h-24 hover:shadow-md transition-shadow">
-                <span className="text-xl font-bold text-gray-500">{brand}</span>
+                <span className="text-xl font-bold text-gray-400">{brand}</span>
               </div>
             ))}
           </div>

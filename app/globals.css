@@ -1,26 +1,63 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Ensure default text is visible */
+@layer base {
+  html {
+    @apply text-gray-900;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-gray-900;
+  }
+  
+  p {
+    @apply text-gray-700;
+  }
+  
+  a {
+    @apply text-gray-800;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Additional custom styles */
+.bg-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Make sure text in card components is visible */
+.card-text {
+  @apply text-gray-800;
+}
+
+/* Fix for accessibility - ensure proper contrast */
+.text-on-dark {
+  @apply text-white;
+}
+
+.text-on-light {
+  @apply text-gray-900;
+}
+
+/* Fix for product name truncation */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 48px;
+}
+
+/* Ensure text contrast in footer */
+.footer a {
+  @apply text-gray-400 hover:text-white;
+}
+
+.footer h3 {
+  @apply text-white;
+}
+
+.footer p {
+  @apply text-gray-400;
 }
